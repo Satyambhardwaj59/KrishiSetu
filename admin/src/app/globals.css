@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-500: #3b82f6; /* Blue theme for admin */
+  --color-primary-600: #2563eb;
+  
+  --color-surface:      #f8fafc;
+  --color-surface-card: #ffffff;
+  --color-border:       #e2e8f0;
+  --color-text-primary: #0f172a;
+  --color-text-muted:   #64748b;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+  }
+}
