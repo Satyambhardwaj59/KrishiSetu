@@ -18,6 +18,7 @@ const orderRoutes        = require('./routes/order.routes');
 const paymentRoutes      = require('./routes/payment.routes');
 const notificationRoutes = require('./routes/notification.routes');
 const chatRoutes         = require('./routes/chat.routes');
+const weatherRoutes      = require('./routes/weather.routes');
 
 const app = express();
 
@@ -71,6 +72,7 @@ app.use('/api/orders',        orderRoutes);
 app.use('/api/payments',      paymentRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/chat',          chatRoutes);
+app.use('/api/weather',       weatherRoutes);
 
 // ── 404 + Error handlers (must be last) ───────────────────────────────────────
 app.use(notFound);

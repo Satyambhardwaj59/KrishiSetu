@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchNotifications, markAsRead, deleteNotification, markAllAsRead } from '@/store/slices/notificationSlice';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { Bell, Package, IndianRupee, MessageSquare, CheckCircle, Trash2 } from 'lucide-react';
+import { Bell, Package, IndianRupee, MessageSquare, CheckCircle, Trash2, CloudSun, Leaf } from 'lucide-react';
 import Link from 'next/link';
 
 export default function NotificationsPage() {
@@ -16,16 +16,20 @@ export default function NotificationsPage() {
   }, [dispatch]);
 
   const getIcon = (type) => {
-    if (type.includes('order')) return <Package size={20} className="text-blue-400" />;
-    if (type.includes('payment')) return <IndianRupee size={20} className="text-green-400" />;
-    if (type.includes('message')) return <MessageSquare size={20} className="text-amber-400" />;
+    if (type.includes('order'))          return <Package      size={20} className="text-blue-400" />;
+    if (type.includes('payment'))        return <IndianRupee  size={20} className="text-green-400" />;
+    if (type.includes('message'))        return <MessageSquare size={20} className="text-amber-400" />;
+    if (type === 'weather_alert')        return <CloudSun     size={20} className="text-sky-400" />;
+    if (type === 'crop_advisory')        return <Leaf         size={20} className="text-emerald-400" />;
     return <Bell size={20} className="text-slate-400" />;
   };
 
   const getLink = (notif) => {
-    if (notif.type.includes('order')) return `/orders/${notif.data?.orderId}`;
-    if (notif.type.includes('payment')) return `/orders/${notif.data?.orderId}`;
-    if (notif.type.includes('message')) return `/chat?user=${notif.data?.senderId}`;
+    if (notif.type.includes('order'))    return `/orders/${notif.data?.orderId}`;
+    if (notif.type.includes('payment'))  return `/orders/${notif.data?.orderId}`;
+    if (notif.type.includes('message'))  return `/chat?user=${notif.data?.senderId}`;
+    if (notif.type === 'weather_alert')  return '/weather';
+    if (notif.type === 'crop_advisory')  return '/weather';
     return '#';
   };
 

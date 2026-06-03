@@ -61,7 +61,8 @@
     transform: translateY(-2px);
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
   }
-  .animate-fade-in {
+  .animate-fade-in,
+  .animate-fadeIn {
     animation: fadeIn 0.4s ease-out;
   }
   @keyframes fadeIn {
@@ -72,4 +73,8 @@
     animation: pulse 3s infinite;
   }
   .scrollbar-thin { scrollbar-width: thin; }
+  /* Weather hourly scrollbar */
+  .overflow-x-auto::-webkit-scrollbar       { height: 4px; }
+  .overflow-x-auto::-webkit-scrollbar-track { background: transparent; }
+  .overflow-x-auto::-webkit-scrollbar-thumb { background: #334155; border-radius: 2px; }
 }

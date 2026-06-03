@@ -5,6 +5,7 @@ import orderReducer        from './slices/orderSlice';
 import chatReducer         from './slices/chatSlice';
 import notificationReducer from './slices/notificationSlice';
 import paymentReducer      from './slices/paymentSlice';
+import weatherReducer      from './slices/weatherSlice';
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     chat        : chatReducer,
     notifications: notificationReducer,
     payment     : paymentReducer,
+    weather     : weatherReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({ serializableCheck: false }),

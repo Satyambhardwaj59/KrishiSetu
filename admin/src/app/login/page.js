@@ -39,8 +39,8 @@ export default function AdminLogin() {
       <Toaster />
       <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
         <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
-            <img src="/logo.png" alt="KrishiSetu Logo" className="h-16 object-contain" />
+          <div className="mx-auto w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+            <KeySquare size={32} />
           </div>
           <h1 className="text-3xl font-bold tracking-tight text-slate-900">Admin Portal</h1>
           <p className="text-slate-500 mt-2">Sign in with your password</p>
