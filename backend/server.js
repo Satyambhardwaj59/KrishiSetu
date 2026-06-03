@@ -3,6 +3,7 @@ const app       = require('./app');
 const connectDB = require('./config/db');
 const initSocket = require('./sockets');
 const logger    = require('./utils/logger');
+const { initWeatherCron } = require('./utils/weatherCron');
 
 const PORT = process.env.PORT || 5000;
 
@@ -15,6 +16,9 @@ const start = async () => {
   // Attach Socket.io and expose `io` on the Express app (accessible in controllers)
   const io = initSocket(httpServer);
   app.set('io', io);
+
+  // Start weather alert cron jobs (passes io for real-time WebSocket alerts)
+  initWeatherCron(io);
 
   httpServer.listen(PORT, () => {
     logger.info(`

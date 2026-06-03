@@ -77,6 +77,20 @@ const userSchema = new mongoose.Schema(
 
     // Refresh token stored for rotation strategy
     refreshToken: { type: String, select: false },
+
+    // ── Weather Intelligence ──────────────────────────────────────────────────
+    savedLocations: {
+      type: [{
+        name       : { type: String, required: true },
+        lat        : { type: Number, required: true },
+        lon        : { type: Number, required: true },
+        country    : { type: String, default: '' },
+        _id        : false,
+      }],
+      default : [],
+      validate: [arr => arr.length <= 5, 'Maximum 5 saved locations allowed'],
+    },
+    weatherAlertsEnabled: { type: Boolean, default: true },
   },
   { timestamps: true }
 );

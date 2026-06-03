@@ -23,6 +23,8 @@ const notificationSchema = new mongoose.Schema(
         'kyc_rejected',
         'new_message',
         'system',
+        'weather_alert',
+        'crop_advisory',
       ],
       required: true,
     },

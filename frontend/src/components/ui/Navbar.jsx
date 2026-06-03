@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useRouter, usePathname } from 'next/navigation';
 import { logout } from '@/store/slices/authSlice';
 import Link from 'next/link';
-import { Leaf, LayoutDashboard, Store, Package, MessageSquare, Bell, LogOut, ChevronDown, List } from 'lucide-react';
+import { Leaf, LayoutDashboard, Store, Package, MessageSquare, Bell, LogOut, ChevronDown, List, CloudSun } from 'lucide-react';
 import { useEffect } from 'react';
 
 export default function GlobalNavbar() {
@@ -23,10 +23,11 @@ export default function GlobalNavbar() {
 
   const navLinks = [
     { name: 'Dashboard', href: '/dashboard', icon: LayoutDashboard, roles: ['farmer', 'buyer', 'admin'] },
-    { name: 'Products', href: '/products', icon: List, roles: ['farmer'] },
-    { name: 'Market', href: '/marketplace', icon: Store, roles: ['farmer', 'buyer'] },
-    { name: 'Orders', href: '/orders', icon: Package, roles: ['farmer', 'buyer'] },
-    { name: 'Chat', href: '/chat', icon: MessageSquare, roles: ['farmer', 'buyer'] },
+    { name: 'Products',  href: '/products',  icon: List,            roles: ['farmer'] },
+    { name: 'Market',    href: '/marketplace',icon: Store,           roles: ['farmer', 'buyer'] },
+    { name: 'Orders',    href: '/orders',    icon: Package,         roles: ['farmer', 'buyer'] },
+    { name: 'Weather',   href: '/weather',   icon: CloudSun,        roles: ['farmer', 'buyer'] },
+    { name: 'Chat',      href: '/chat',      icon: MessageSquare,   roles: ['farmer', 'buyer'] },
   ];
 
   return (
