@@ -7,6 +7,47 @@ Welcome to the **KrishiSetu** monorepo! This application is separated into three
 
 ---
 
+## 🌟 Features Overview
+
+### 1. Dual-Application Portals
+* **Farmer & Buyer Portal**: Next.js & Redux Toolkit UI for crop listing, profile management, marketplace browsing, and bulk purchasing.
+* **Admin Control Center**: Built-in KYC validation, interactive charts, and system overrides for dispute management.
+
+### 2. Weather Intelligence & Crop Advisory
+* **Forecasting**: Connects to the **Open-Meteo API** using `axios` to fetch current, 24-hour, and 7-day weather indicators based on user coordinates.
+* **Advisory Engine**: Generates crop recommendations (watering, harvesting alerts) depending on precipitation, temperature, and wind speed parameters.
+* **Automated Weather Alerts**: Uses `node-cron` to scan forecasts every 12 hours and broadcast real-time `weather_alert` events via `Socket.io` to warn users of severe weather.
+
+### 3. Escrow Payments & Secure Transactions
+* **Razorpay Flow**: Seamless payment processing with cryptographic signature verification.
+* **Escrow Management**: Holds buyer funds safely in escrow until order delivery, with admin override capabilities.
+
+### 4. Real-Time Communication
+* **Instant Messaging**: Custom room support (`chat.socket.js`) powered by `Socket.io` for negotiations between buyers and farmers.
+* **Live Notifications**: Immediate order, payment, and weather alert notifications.
+
+---
+
+## 🛠️ Technology Stack & Dependencies
+
+### Backend (`backend/`)
+* **Framework**: Express, Node.js
+* **Database**: MongoDB (Mongoose ODM)
+* **Auth**: JSON Web Tokens (`jsonwebtoken`), `bcryptjs`
+* **Real-time & Cron**: `socket.io`, `node-cron`
+* **Validations & Security**: `joi`, `express-rate-limit`, `helmet`
+* **Media & Payments**: `cloudinary`, `multer`, `multer-storage-cloudinary`, `razorpay`
+
+### Frontend & Admin (`frontend/` & `admin/`)
+* **Framework**: Next.js (React 19)
+* **Styling**: Tailwind CSS & `@tailwindcss/postcss`
+* **State Management**: Redux Toolkit & React Redux (in `frontend/`)
+* **Charts**: Recharts
+* **Networking & Socket**: `axios`, `socket.io-client`
+* **Alerts & Icons**: `react-hot-toast`, `lucide-react`, `react-icons`
+
+---
+
 ## 🚀 How to Start the Project Locally
 
 Follow these steps to spin up the entire ecosystem on your local machine:

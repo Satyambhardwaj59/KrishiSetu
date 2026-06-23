@@ -28,8 +28,8 @@ const Footer = () => {
           <h4 className="text-white font-bold mb-6">Quick Links</h4>
           <ul className="space-y-4 text-slate-400 text-sm">
             <li><Link href="/" className="hover:text-green-400 transition-colors">Home</Link></li>
-            <li><Link href="/about" className="hover:text-green-400 transition-colors">About Us</Link></li>
-            <li><Link href="/services" className="hover:text-green-400 transition-colors">Our Services</Link></li>
+            <li><Link href="/#" className="hover:text-green-400 transition-colors">About Us</Link></li>
+            <li><Link href="/#" className="hover:text-green-400 transition-colors">Our Services</Link></li>
             <li><Link href="/register?role=farmer" className="hover:text-green-400 transition-colors">For Farmers</Link></li>
             <li><Link href="/register?role=buyer" className="hover:text-green-400 transition-colors">For Buyers</Link></li>
           </ul>
@@ -38,10 +38,10 @@ const Footer = () => {
         <div>
           <h4 className="text-white font-bold mb-6">Legal</h4>
           <ul className="space-y-4 text-slate-400 text-sm">
-            <li><Link href="/terms" className="hover:text-green-400 transition-colors">Terms of Service</Link></li>
-            <li><Link href="/privacy" className="hover:text-green-400 transition-colors">Privacy Policy</Link></li>
-            <li><Link href="/refund" className="hover:text-green-400 transition-colors">Refund & Cancellation</Link></li>
-            <li><Link href="/trust" className="hover:text-green-400 transition-colors">Trust & Safety Center</Link></li>
+            <li><Link href="/#" className="hover:text-green-400 transition-colors">Terms of Service</Link></li>
+            <li><Link href="/#" className="hover:text-green-400 transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/#" className="hover:text-green-400 transition-colors">Refund & Cancellation</Link></li>
+            <li><Link href="/#" className="hover:text-green-400 transition-colors">Trust & Safety Center</Link></li>
           </ul>
         </div>
 
@@ -50,15 +50,15 @@ const Footer = () => {
           <ul className="space-y-4 text-slate-400 text-sm">
             <li className="flex items-start gap-3">
               <MapPin size={18} className="text-green-500 flex-shrink-0 mt-0.5" />
-              <span>Sector 62, Noida,<br />Uttar Pradesh, India 201309</span>
+              <span>Patna<br />Bihar, India 800001</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone size={18} className="text-green-500 flex-shrink-0" />
-              <span>1800-123-4567 (Toll Free)</span>
+              <span>+91 7488499849</span>
             </li>
             <li className="flex items-center gap-3">
               <Mail size={18} className="text-green-500 flex-shrink-0" />
-              <span>support@krishisetu.com</span>
+              <span>satyambhardwaj59@gmail.com</span>
             </li>
           </ul>
         </div>
